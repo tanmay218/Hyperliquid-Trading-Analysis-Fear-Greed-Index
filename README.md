@@ -99,6 +99,41 @@ Daily market sentiment data from alternative.me:
 
 ---
 
-## 💡 Actionable Trading Strategies
 
-### Strategy 1: Adaptive Leverage
+---
+
+## 🛠️ Technologies Used
+
+- **Python 3.9+**
+- **Pandas** - Data manipulation and analysis
+- **NumPy** - Numerical computations
+- **Matplotlib/Seaborn** - Data visualization
+- **Plotly** - Interactive charts
+- **Scikit-learn** - Machine learning (bonus)
+- **XGBoost** - Gradient boosting (bonus)
+- **Google Colab** - Development environment
+
+---
+
+## 📁 Repository Structure
+**Rule of Thumb**: *"Cut leverage by 40% during Fear, increase by 30% during Greed only if you're a consistent winner"*
+
+### Strategy 2: Sentiment-Based Trading Frequency
+| Trader Type | Fear Days | Greed Days |
+|-------------|-----------|------------|
+| Consistent Winners | 5-8 trades/day | 5-8 trades/day |
+| Inconsistent/Losers | 1-2 trades max | Normal frequency |
+
+**Rule of Thumb**: *"Trade half as much during Fear unless you're a proven winner"*
+
+### Strategy 3: Directional Bias
+- **Greed Days**: Maintain bullish bias (Long Ratio > 0.6)
+- **Fear Days**: Switch to neutral/bearish (Long Ratio 0.4-0.5)
+- **Neutral Days**: Balanced approach (0.45-0.55)
+
+**Rule of Thumb**: *"When in doubt, follow the sentiment - go long in Greed, short in Fear"*
+
+---
+
+## 📊 Summary Rules of Thumb
+
