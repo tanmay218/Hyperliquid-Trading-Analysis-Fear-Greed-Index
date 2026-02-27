@@ -12,46 +12,51 @@ This project analyzes how market sentiment (Fear & Greed Index) relates to trade
 
 ## 📁 Datasets Required
 
-This repository contains two datasets that you need to upload to the Colab notebook:
+Due to file size limitations (>25MB), the datasets are hosted on Google Drive. You need to download both files before running the Colab notebook.
 
-### 1. Historical Trading Data (`historical_data.csv`)
-Contains individual trade records from Hyperliquid exchange:
+---
 
-| Column | Description |
+### 📌 Dataset 1: Bitcoin Market Sentiment (Fear & Greed Index)
+
+| Detail | Information |
 |--------|-------------|
-| Account | Unique wallet address of the trader |
-| Coin | Trading pair/symbol (@ for perpetuals) |
-| Execution Price | Price at which trade was executed |
-| Size Tokens | Quantity of tokens traded |
-| Size USD | Notional value in USD |
-| Side | BUY (long) or SELL (short) |
-| Timestamp IST | Date and time in Indian Standard Time |
-| Start Position | Position size before this trade |
-| Direction | Overall position direction after trade |
-| Closed PnL | Realized profit/loss from closed positions |
-| Transaction Hash | Unique blockchain transaction ID |
-| Order ID | Exchange order identifier |
-| Crossed | TRUE = market order, FALSE = limit order |
-| Fee | Trading fee paid in USD |
-| Trade ID | Unique trade identifier |
+| **Description** | Daily market sentiment data showing whether the market was in Fear, Neutral, or Greed mode |
+| **File Name** | `fear_greed_index.csv` |
+| **Columns** | Date, Classification (Fear/Greed/Neutral), Value |
+| **Download Link** | [⬇️ Click here to download Fear & Greed Dataset](https://drive.google.com/file/d/1PgQC0tO8XN-wqkNyghWc_-mnrYv_nhSf/view?usp=sharing) |
 
-### 2. Fear & Greed Index (`fear_greed_index.csv`)
-Daily market sentiment data from alternative.me:
+**Instructions for downloading:**
+1. Click the link above
+2. Look for the **download symbol** (⬇️) in the **top-left corner** of the Google Drive page
+3. Click the download symbol to save the file to your computer
 
-| Column | Description |
+**Direct Link:** `https://drive.google.com/file/d/1PgQC0tO8XN-wqkNyghWc_-mnrYv_nhSf/view?usp=sharing`
+
+---
+
+### 📌 Dataset 2: Historical Trader Data (Hyperliquid)
+
+| Detail | Information |
 |--------|-------------|
-| timestamp | Unix timestamp |
-| value | Fear & Greed score (0-100) |
-| classification | Sentiment category (Extreme Fear to Extreme Greed) |
-| date | Human-readable date |
+| **Description** | Complete trading history from Hyperliquid exchange with individual trade records |
+| **File Name** | `historical_data.csv` |
+| **Columns** | account, symbol, execution price, size, side, time, start position, event, closedPnL, leverage, and more |
+| **Download Link** | [⬇️ Click here to download Hyperliquid Trading Dataset](https://drive.google.com/file/d/1IAfLZwu6rJzyWKgBToqwSmmVYU6VbjVs/view?usp=sharing) |
+
+**Instructions for downloading:**
+1. Click the link above
+2. Look for the **download symbol** (⬇️) in the **top-left corner** of the Google Drive page
+3. Click the download symbol to save the file to your computer
+
+**Direct Link:** `https://drive.google.com/file/d/1IAfLZwu6rJzyWKgBToqwSmmVYU6VbjVs/view?usp=sharing`
 
 ---
 
 ## 📥 How to Use This Repository
 
-### Step 1: Download the Datasets
-- Download both `historical_data.csv` and `fear_greed_index.csv` from this repository
-- Save them to your local computer
+### Step 1: Download Both Datasets
+- Download **both CSV files** from the Google Drive links above
+- Save them to your local computer (remember where you saved them!)
 
 ### Step 2: Open the Colab Notebook
 - Click the **"Open in Colab"** badge at the top of this README
@@ -60,3 +65,8 @@ Daily market sentiment data from alternative.me:
 ### Step 3: Upload the Datasets to Colab
 When you run the first code cell in the notebook, you will see a file upload prompt:
 
+```python
+# This cell will prompt you to upload files
+from google.colab import files
+print("Please upload BOTH CSV files when prompted")
+uploaded = files.upload()
