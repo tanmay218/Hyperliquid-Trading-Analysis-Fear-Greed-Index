@@ -10,15 +10,9 @@ This project analyzes how market sentiment (Fear & Greed Index) relates to trade
 
 ---
 
-## 🎯 Objective
-- Analyze relationship between market sentiment and trader performance
-- Identify behavioral patterns during Fear vs Greed days
-- Develop actionable trading strategies based on findings
-- Segment traders into meaningful categories for targeted insights
+## 📁 Datasets Required
 
----
-
-## 📁 Datasets
+This repository contains two datasets that you need to upload to the Colab notebook:
 
 ### 1. Historical Trading Data (`historical_data.csv`)
 Contains individual trade records from Hyperliquid exchange:
@@ -53,53 +47,16 @@ Daily market sentiment data from alternative.me:
 
 ---
 
-## 🔍 Analysis Performed
+## 📥 How to Use This Repository
 
-### Part A: Data Preparation
-- ✅ Loaded and inspected both datasets (22,000+ rows)
-- ✅ Cleaned missing values and duplicates
-- ✅ Converted timestamps and aligned by date
-- ✅ Created key metrics:
-  - Daily PnL per trader
-  - Win rate
-  - Average trade size
-  - Leverage distribution
-  - Trade frequency
-  - Long/short ratio
+### Step 1: Download the Datasets
+- Download both `historical_data.csv` and `fear_greed_index.csv` from this repository
+- Save them to your local computer
 
-### Part B: Analysis
-- ✅ Compared trader performance (PnL, win rate) between Fear vs Greed days
-- ✅ Analyzed behavioral changes based on sentiment:
-  - Trade frequency
-  - Leverage usage
-  - Long/short bias
-  - Position sizing
-- ✅ Created 3 trader segments:
-  1. **Performance**: Consistent Winners (>55% win rate), Inconsistent (45-55%), Consistent Losers (<45%)
-  2. **Leverage**: Low (1-2x), Medium (2-5x), High (5-10x), Very High (10x+)
-  3. **Frequency**: Infrequent, Occasional, Frequent, Very Frequent
-- ✅ Generated 3 key insights with supporting charts/tables
+### Step 2: Open the Colab Notebook
+- Click the **"Open in Colab"** badge at the top of this README
+- The notebook will open in Google Colab
 
-### Part C: Actionable Strategies
-- ✅ **Strategy 1**: Adaptive Leverage Based on Sentiment
-- ✅ **Strategy 2**: Sentiment-Based Trading Frequency
-- ✅ **Strategy 3**: Directional Bias Adjustment
-- ✅ Summary Rules of Thumb for traders
-
----
-
-## 📈 Key Findings
-
-### 1. Performance by Sentiment
-| Sentiment | Avg PnL | Win Rate | Trades/Day | Leverage | Long Ratio |
-|-----------|---------|----------|------------|----------|------------|
-| Fear | -$150 | 42% | 5 | 3.2x | 45% |
-| Neutral | $50 | 48% | 7 | 4.1x | 50% |
-| Greed | $200 | 52% | 9 | 5.3x | 55% |
-
-### 2. Trader Segmentation Results
-- **Consistent Winners** (win rate >55%): Maintain discipline across all sentiments
-- **Consistent Losers** (win rate <45%): Most affected by fear, should reduce activity
-- **High Leverage Users** (>5x): Higher volatility in PnL, more sensitive to sentiment changes
----
+### Step 3: Upload the Datasets to Colab
+When you run the first code cell in the notebook, you will see a file upload prompt:
 
