@@ -1,6 +1,6 @@
 # 📊 Hyperliquid Trading Analysis: Impact of Market Sentiment on Trader Behavior
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/YOUR_COLAB_FILE_ID)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1TF36fYpvUbq3If1ONxQ1icg6HUecXuIJ)
 
 ## 📝 Project Overview
 
@@ -101,7 +101,5 @@ Daily market sentiment data from alternative.me:
 - **Consistent Winners** (win rate >55%): Maintain discipline across all sentiments
 - **Consistent Losers** (win rate <45%): Most affected by fear, should reduce activity
 - **High Leverage Users** (>5x): Higher volatility in PnL, more sensitive to sentiment changes
-
 ---
-
 
