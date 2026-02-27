@@ -104,6 +104,4 @@ Daily market sentiment data from alternative.me:
 
 ---
 
-## 💡 Actionable Trading Strategies
 
-### Strategy 1: Adaptive Leverage
